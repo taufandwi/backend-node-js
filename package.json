@@ -16,7 +16,7 @@
 		"url": "https://github.com/MarkKhramko/nodejs-express-jwt/issues"
 	},
 	"scripts": {
-		"start": "node ./app/app.js",
+		"start": "babel-node ./app/app.js",
 		"dev": "cross-env NODE_ENV=development nodemon --ignore public/ --exec babel-node ./app/app.js",
 		"production": "cross-env NODE_ENV=production babel-node ./app/app.js"
 	},
@@ -30,6 +30,11 @@
 		]
 	},
 	"dependencies": {
+		"@babel/cli": "^7.7.4",
+		"@babel/core": "^7.7.4",
+		"@babel/node": "^7.7.4",
+		"@babel/preset-env": "^7.7.4",
+		"babel-plugin-module-resolver": "^4.0.0",
 		"bcrypt-nodejs": "^0.0.3",
 		"body-parser": "^1.18.2",
 		"compression": "^1.7.3",
