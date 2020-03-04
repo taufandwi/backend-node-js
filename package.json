@@ -16,10 +16,10 @@
 		"url": "https://github.com/MarkKhramko/nodejs-express-jwt/issues"
 	},
 	"scripts": {
-		"start": "node src/index.js",
-    	"build": "webpack"
+		"start": "node ./app/app.js",
+		"dev": "cross-env NODE_ENV=development nodemon --ignore public/ --exec babel-node ./app/app.js",
+		"production": "cross-env NODE_ENV=production babel-node ./app/app.js"
 	},
-	"heroku-run-build-script": true,
 	"jest": {
 		"globals": {
 			"__DEV__": true
